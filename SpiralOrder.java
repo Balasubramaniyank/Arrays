@@ -1,4 +1,5 @@
 package Arrays;
+import java.util.*;
 
 public class SpiralOrder {
 	
@@ -6,7 +7,19 @@ public class SpiralOrder {
 		
 		    
 		
-		int arr[][]=new int [3][3];
+		Scanner s = new Scanner (System.in);
+		
+		System.out.println("Enter the N value");
+		
+		int n = s.nextInt();
+		
+		
+		
+		
+		
+		
+		
+		int arr[][]=new int [n][n];
 		
 		int right = arr.length-1;
 		int left =0;
@@ -27,7 +40,7 @@ public class SpiralOrder {
 			 for(int i =top; i<=bottom; i++) {
 				 
 				 
-				 arr[right][i]=ar++;
+				 arr[i][right]=ar++;
 				 
 				 
 			 }
@@ -52,9 +65,11 @@ public class SpiralOrder {
 			 
 			
 		}
+		  
+		 if(n%2!=0) {
 		 
-		
-		
+		  arr[top][left]=ar;
+		 }
 		for(int i=0;i<arr.length;i++) {
 			for(int j=0;j<arr[0].length;j++) {
 				System.out.print(arr[i][j] +" ");
